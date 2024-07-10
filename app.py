@@ -27,5 +27,4 @@ if build_histogram: # se a caixa de seleção for selecionada
 if build_scatter:
   st.write('Criado um garioc de disppersao')
   fig_scatter = px.scatter(car_data, y="type", x='price', title='Preço por Tipo de Veículo',labels={'type': 'Tipo de Veículo', 'price': 'Preço'}) # criar um gráfico de dispersão
-fig.show() # exibindo
-st.plotly_chart(fig_scatter, use_container_width=True)
+  st.plotly_chart(fig_scatter, use_container_width=True)
