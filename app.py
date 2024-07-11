@@ -10,7 +10,7 @@ fig = px.histogram(car_data, x="price", color="model",
 fig.show() # exibindo
 
 st.header("Analise de veiculos usados")
-st.sidebar.header('Escolha o que deseja filtrar')
+st.sidebar.header('Escolha qual grafico deseja criar')
 
 st.dataframe(car_data)
 
@@ -25,6 +25,6 @@ if build_histogram: # se a caixa de seleção for selecionada
   st.plotly_chart(fig_histogram,use_container_width=True)
 
 if build_scatter:
-  st.write('Criado um garioc de disppersao')
+  st.write('Criado um grafico de dispersao')
   fig_scatter = px.scatter(car_data, y="type", x='price', title='Preço por Tipo de Veículo',labels={'type': 'Tipo de Veículo', 'price': 'Preço'}) # criar um gráfico de dispersão
   st.plotly_chart(fig_scatter, use_container_width=True)
